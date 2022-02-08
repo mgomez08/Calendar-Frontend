@@ -25,4 +25,45 @@ describe("Tests in <AppRouter />", () => {
     );
     expect(wrapper.find(Loading).exists()).toBe(true);
   });
+
+  test("Should display PublicRoute", () => {
+    const initialState = {
+      auth: {
+        checking: false,
+        uid: null,
+      },
+    };
+    let store = mockStore(initialState);
+    const wrapper = mount(
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
+    );
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(".login-container").exists()).toBe(true);
+  });
+
+  test("Should display PrivateRoute", () => {
+    const initialState = {
+      calendar: {
+        events: [],
+      },
+      auth: {
+        checking: false,
+        uid: "123",
+        name: "Test",
+      },
+      ui: {
+        modalOpen: false,
+      },
+    };
+    let store = mockStore(initialState);
+    const wrapper = mount(
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
+    );
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(".calendar-screen").exists()).toBe(true);
+  });
 });
