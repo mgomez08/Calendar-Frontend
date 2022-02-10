@@ -323,13 +323,13 @@ exports[`Tests in <AppRouter /> Should display PrivateRoute 1`] = `
               className="rbc-day-bg"
             />
             <div
+              className="rbc-day-bg"
+            />
+            <div
+              className="rbc-day-bg"
+            />
+            <div
               className="rbc-day-bg rbc-today"
-            />
-            <div
-              className="rbc-day-bg"
-            />
-            <div
-              className="rbc-day-bg"
             />
             <div
               className="rbc-day-bg"
@@ -362,7 +362,7 @@ exports[`Tests in <AppRouter /> Should display PrivateRoute 1`] = `
                 </a>
               </div>
               <div
-                className="rbc-date-cell rbc-now rbc-current"
+                className="rbc-date-cell"
                 key="header_1"
                 role="cell"
               >
@@ -388,7 +388,7 @@ exports[`Tests in <AppRouter /> Should display PrivateRoute 1`] = `
                 </a>
               </div>
               <div
-                className="rbc-date-cell"
+                className="rbc-date-cell rbc-now rbc-current"
                 key="header_3"
                 role="cell"
               >
