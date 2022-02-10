@@ -115,6 +115,7 @@ export const CalendarModal = () => {
       contentLabel="Example"
       className="modal"
       overlayClassName="modal-fondo"
+      ariaHideApp={process.env.NODE_ENV !== "test"}
     >
       <h1> {activeEvent ? "Editar Evento" : "Nuevo Evento"} </h1>
       <hr />
